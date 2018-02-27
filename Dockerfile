@@ -28,3 +28,5 @@ RUN tar xf luarocks-${LUAROCKS_VERSION}.tar.gz
 RUN cd /luarocks-${LUAROCKS_VERSION} \
     && ./configure --with-lua-include=/lua-${LUA_VERSION}/src/ \
     && make bootstrap
+
+RUN luarocks install lua-requests
