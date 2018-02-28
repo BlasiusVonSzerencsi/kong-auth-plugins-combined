@@ -8,7 +8,7 @@ If a request can be authenticated using any of these methods (provided by the pl
 
 ## Solution
 
-...
+Add both authentication plugins to the API with fallback to an anonymous consumer (if the authentication fails). Enable the request termination plugin for the anonymous user.
 
 ## Setup
 
@@ -34,10 +34,10 @@ Run setup script
 
 ```bash
 cd /test
-lua test.lua
+lua setup.lua
 ```
 
-Test basic auth w/ valid credentials
+Test basic auth w/ valid credentials (from the host machine)
 
 ```bash
 curl -X GET \
